@@ -49,24 +49,36 @@ Page({
       var that = this
       wx.login({
         success: function(res) {
-          var postdata = {
-            code: res.code,
-            avatarUrl: userInfo.avatarUrl,
-            city: userInfo.city,
-            country: userInfo.country,
-            gender: userInfo.gender,
-            nickName: userInfo.nickName,
-            province: userInfo.province
+          // 拼装请求所需参数
+          var params = {
+            // 请求方法名
+            action: 'login',
+            // 请求参数
+            requestParam: {
+              code: res.code
+            }
           }
+          // 请求参数组合
+          const newparams = Object.assign(params);
           wx.request({
-            url: AppUrl.globalData.requestUrl + '/index/getOpenIdNew',
-            data: postdata,
+            url: AppUrl.globalData.assembleUrl,
+            data: newparams,
             header: {
-              'content-type': ''
+              'content-type': 'application/json' // 默认值
             },
             method: 'post',
             success: function(res) {
-              console.log(res)
+              // 请求之后返回的数据值
+              var resData = res.data
+              // 把用户ID存入本地缓存
+              wx.setStorage({
+                key: 'userId',
+                data: resData,
+              })
+              // 跳转首页
+              wx.switchTab({
+                url: '/pages/index/index'
+              })
             }
           })
         }
@@ -84,7 +96,7 @@ Page({
       })
       //授权成功后，跳转进入小程序首页
       wx.switchTab({
-        url: '/pages/index/index'
+        // url: '/pages/index/index'
       })
     } else {
       //用户按了拒绝按钮
