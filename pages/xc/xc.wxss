@@ -1,1 +1,12 @@
 /* pages/xc/xc.wxss */
+.scrollPics {
+    height: 200rpx;
+    width: 300rpx;
+    margin-bottom: 10rpx;
+    overflow: hidden;
+    position: relative;
+    background-color: red;
+}
+.slider {
+    margin-top: 0;
+}

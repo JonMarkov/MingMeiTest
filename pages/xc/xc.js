@@ -1,4 +1,5 @@
 // pages/xc/xc.js
+var AppUrl = getApp()
 Page({
 
   /**
