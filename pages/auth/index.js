@@ -16,16 +16,15 @@ Page({
               // 获取上次授权时间-如果超过12小时则重新授权
               wx.getStorage({
                 key: 'curTime',
-                success: function(res) {
+                success: function(ref) {
                   // 获取上次授权的时间戳
-                  var lastTime = res.data
+                  var lastTime = ref.data
                   // 获取当前时间戳
                   var timestamp = Date.parse(new Date());
                   // 得到上次授权12小时之后的时间戳
                   var twelveTime = lastTime + 43200000
                   // 把上次授权的时间戳和当前得到的时间戳进行对比-如果超过12小时则重新授权
                   if (timestamp < twelveTime) {
-                    console.log(res)
                     //用户已经授权过且距离上次授权未超过12小时则跳转到首页
                     wx.switchTab({
                       url: '/pages/index/index'
@@ -73,7 +72,7 @@ Page({
               // 把用户ID存入本地缓存
               wx.setStorage({
                 key: 'userId',
-                data: resData,
+                data: resData.userId,
               })
               // 跳转首页
               wx.switchTab({
@@ -93,10 +92,6 @@ Page({
       wx.setStorage({
         key: "userInfo",
         data: e.detail.userInfo
-      })
-      //授权成功后，跳转进入小程序首页
-      wx.switchTab({
-        // url: '/pages/index/index'
       })
     } else {
       //用户按了拒绝按钮

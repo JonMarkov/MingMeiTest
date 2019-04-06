@@ -4,7 +4,8 @@
     "pages/index/index",
     "pages/category/category",
     "pages/search/search",
-    "pages/mine/mine"
+    "pages/mine/mine",
+    "pages/xc/xc"
   ],
   "window": {
     "backgroundTextStyle": "light",
