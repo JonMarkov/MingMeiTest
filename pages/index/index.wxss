@@ -255,7 +255,7 @@ page {
   width: 100%;
   padding: 10rpx;
   font-size: 28rpx;
-  color: #fe4a65
+  color: #fe4a65;
 }
 
 /* 列表 */
@@ -298,14 +298,13 @@ page {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  margin: 10rpx 0rpx
-  
+  margin: 10rpx 0rpx;
 }
 
 .content_txt {
   display: flex;
   flex-direction: column;
-  line-height: 35rpx
+  line-height: 35rpx;
 }
 
 .content_pic {
@@ -322,18 +321,22 @@ page {
   font-size: 24rpx;
   width: 80%;
 }
-.content_pic_present{
+
+.content_pic_present {
   font-size: 35rpx;
-  color: #fe4a65
+  color: #fe4a65;
 }
-.content_pic_original{
-  font-size: 24rpx
+
+.content_pic_original {
+  font-size: 24rpx;
 }
+
 .clan {
   display: flex;
   justify-content: space-between;
   background: #fff;
 }
+
 .clan-cate {
   width: 200rpx;
   display: flex;

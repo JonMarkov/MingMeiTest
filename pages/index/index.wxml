@@ -27,7 +27,7 @@
         </view>
         <view class='clan-cate' bindtap='bindToMall'>
           <image src='../../../image/index/qd.jpg'></image>
-          <text>精品团购</text>
+          <text>全民砍价</text>
         </view>
         <view class='clan-cate' bindtap='bindToMall'>
           <image src='../../../image/index/qd.jpg'></image>
