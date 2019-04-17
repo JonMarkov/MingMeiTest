@@ -18,19 +18,19 @@
       <!-- 频道入口 数据不更改，写死即可 -->
       <view class='clan'>
         <view class='clan-cate' bindtap='bindToMall'>
-          <image src='../../../image/index/qd.jpg'></image>
+          <image src='/pics/icons/sign_icon.png'></image>
           <text>每日签到</text>
         </view>
         <view class='clan-cate' bindtap='bindToMall'>
-          <image src='../../../image/index/qd.jpg'></image>
+          <image src='/pics/icons/spike_icon.png'></image>
           <text>限时秒杀</text>
         </view>
         <view class='clan-cate' bindtap='bindToMall'>
-          <image src='../../../image/index/qd.jpg'></image>
+          <image src='/pics/icons/bargain_icon.png'></image>
           <text>全民砍价</text>
         </view>
         <view class='clan-cate' bindtap='bindToMall'>
-          <image src='../../../image/index/qd.jpg'></image>
+          <image src='/pics/icons/redeem_icon.png'></image>
           <text>积分兑换</text>
         </view>
       </view>

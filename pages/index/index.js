@@ -20,6 +20,7 @@ Page({
         image: '/image/index/banner_3.jpg'
       },
     ],
+    
     // 商品列表
     recommend_info:[{
       thumb: '/image/index/banner_1.jpg',
