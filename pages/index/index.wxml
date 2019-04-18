@@ -11,7 +11,7 @@
       <swiper class="first_swiper" indicator-dots="true" autoplay="true" interval="3000" circular="true">
         <block wx:for="{{recommend_pics}}">
           <swiper-item>
-            <image src="{{item.image}}" class="first_swiper-item"></image>
+            <image src="{{item.advertUrl}}" class="first_swiper-item"></image>
           </swiper-item>
         </block>
       </swiper>

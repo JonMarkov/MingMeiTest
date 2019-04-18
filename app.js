@@ -1,8 +1,4 @@
 //app.js  
-var fundebug = require('./libs/fundebug.1.0.0.min.js');
-fundebug.init({
-  apikey: 'deabe72389b9701e9f0f6eb912074bb4cd107df3b32c88a1748df82b2a04e75b'
-})
 App({
   onLaunch: function() {
     var that = this;

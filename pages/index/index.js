@@ -10,16 +10,7 @@ Page({
     // 距离头部
     scrollTop: 0,
     // 轮播图片
-    recommend_pics: [{
-        image: '/image/index/banner_1.jpg'
-      },
-      {
-        image: '/image/index/banner_2.jpg'
-      },
-      {
-        image: '/image/index/banner_3.jpg'
-      },
-    ],
+    recommend_pics: [],
     
     // 商品列表
     recommend_info:[{
@@ -98,9 +89,9 @@ Page({
         'content-type': ''
       },
       success: function(res) {
-        console.log(res)
+      //  把获取到的数据存入data
         that.setData({
-          recommend_pics: res.data.result
+          recommend_pics: res.data
         })
       }
     })
